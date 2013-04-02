@@ -1,6 +1,6 @@
 #!/bin/bash
 # Filename:      custom_prompt.sh
-# Author:        Dave Vehrs 
+# Author:        Dave Vehrs
 # Last Modified: 02 Apr 2013 09:29:00 by Michal Czerski
 
 # Current Format: USER@HOST [dynamic section] { CURRENT DIRECTORY }$ 
