@@ -22,8 +22,10 @@ class DotFile(object):
 
 
 DOTFILES = [
+    DotFile(repo_path='bashrc',
+            user_path='~/.bashrc'),
     DotFile(repo_path='custom_prompt.sh',
-            user_path='~/skrypty/custom_prompt.sh')
+            user_path='~/scripts/custom_prompt.sh')
 ]
 
 
