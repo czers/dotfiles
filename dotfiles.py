@@ -25,7 +25,9 @@ DOTFILES = [
     DotFile(repo_path='bashrc',
             user_path='~/.bashrc'),
     DotFile(repo_path='custom_prompt.sh',
-            user_path='~/scripts/custom_prompt.sh')
+            user_path='~/scripts/custom_prompt.sh'),
+    DotFile(repo_path='natural_scroll.sh',
+            user_path='~/scripts/natural_scroll.sh'),
 ]
 
 
