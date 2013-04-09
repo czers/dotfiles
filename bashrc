@@ -99,9 +99,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 EDITOR=vim
+GIT_EDITOR=vim
 
 PATH=$PATH:~/scripts
 
 source ~/scripts/custom_prompt.sh
 
 alias students-mosh='mosh --server=~/mosh/mosh-1.2.4/bin/mosh-server mc291523@students.mimuw.edu.pl'
+
+alias hulk-register='ssh -f -N -R 57489:localhost:22 mc291523@students.mimuw.edu.pl'
+alias hulk-bridge='mosh --server=~/mosh/mosh-1.2.4/bin/mosh-server mc291523@students.mimuw.edu.pl ./skrypty/hulk-bridge.sh'
