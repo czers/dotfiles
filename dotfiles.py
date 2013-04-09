@@ -14,7 +14,12 @@ class DotFile(object):
 
     def pull_local(self):
         """Pull a local copy of a dotfile into the repo"""
-        shutil.copyfile(self.user_path, self.repo_path)
+        try:
+            shutil.copyfile(self.user_path, self.repo_path)
+        except IOError as err:
+            msg = "Could not pull %s from %s: (%s) %s" % (
+                self.repo_path, self.user_path, err.errno, err.strerror)
+            print msg
 
     def push_repo(self):
         """Push a repo copy of a dotfile to some local location"""
