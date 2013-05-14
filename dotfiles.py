@@ -42,6 +42,8 @@ DOTFILES = [
             user_path='~/scripts/custom_prompt.sh'),
     DotFile(repo_path='natural_scroll.sh',
             user_path='~/scripts/natural_scroll.sh'),
+    DotFile(repo_path='tmux.conf',
+            user_path='~/.tmux.conf'),
 ]
 
 
