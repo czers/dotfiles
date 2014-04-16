@@ -118,6 +118,16 @@ GIT_EDITOR=vim
 
 PATH=$PATH:~/scripts
 
+# SMART-DUST
+PATH=$PATH:~/arm/bin/:~/Dropbox/Studia/sd/ivlmgr/make/scripts
+
+# ZAO
+PATH=$PATH:~/Dropbox/Studia/zao/cloc-1.60:~/Dropbox/Studia/zao/sloccount-2.26:~/Dropbox/Studia/zao/javancss-32.53/bin
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+CLASSPATH=$CLASSPATH:~/Dropbox/Studia/zao/javancss-32.53/lib:~/Dropbox/Studia/zao/xradar-1.1.2/lib:~/Dropbox/Studia/zao/xradar-1.1.2/lib/xradar-1.1.2.jar
+XRADAR_HOME=~/Dropbox/Studia/zao/xradar-1.1.2/
+
+eval `dircolors ~/.dircolors/dircolors.ansi-dark`
 source ~/scripts/custom_prompt.sh
 
-alias students-mosh="mosh --server='~/mosh/mosh-1.2.4/bin/mosh-server' mc291523@students.mimuw.edu.pl"
+alias students-mosh="mosh --server='~/mosh/local/bin/mosh-server' mc291523@students.mimuw.edu.pl"

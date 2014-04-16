@@ -44,6 +44,10 @@ DOTFILES = [
             user_path='~/scripts/natural_scroll.sh'),
     DotFile(repo_path='tmux.conf',
             user_path='~/.tmux.conf'),
+    DotFile(repo_path='gnome-terminal-colors-solarized.tar.gz',
+            user_path='~/scripts/gnome-terminal-colors-solarized.tar.gz'),
+    DotFile(repo_path='dircolors.ansi-dark',
+            user_path='~/.dircolors/dircolors.ansi-dark'),
 ]
 
 
