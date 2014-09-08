@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -119,15 +119,16 @@ GIT_EDITOR=vim
 PATH=$PATH:~/scripts
 
 # SMART-DUST
-PATH=$PATH:~/arm/bin/:~/Dropbox/Studia/sd/ivlmgr/make/scripts
+PATH=$PATH:~/arm/bin:~/Dropbox/Studia/sd/ivlmgr/make/scripts
 
 # ZAO
-PATH=$PATH:~/Dropbox/Studia/zao/cloc-1.60:~/Dropbox/Studia/zao/sloccount-2.26:~/Dropbox/Studia/zao/javancss-32.53/bin
+PATH=$PATH:~/Dropbox/Studia/zao/cloc-1.60:~/Dropbox/Studia/zao/sloccount-2.26:~/Dropbox/Studia/zao/javancss-32.53/bin:~/ZAO_bin/bin
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 CLASSPATH=$CLASSPATH:~/Dropbox/Studia/zao/javancss-32.53/lib:~/Dropbox/Studia/zao/xradar-1.1.2/lib:~/Dropbox/Studia/zao/xradar-1.1.2/lib/xradar-1.1.2.jar
 XRADAR_HOME=~/Dropbox/Studia/zao/xradar-1.1.2/
 
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
+export GIT_PS1_SHOWDIRTYSTATE=1
 source ~/scripts/custom_prompt.sh
 
 alias students-mosh="mosh --server='~/mosh/local/bin/mosh-server' mc291523@students.mimuw.edu.pl"

@@ -58,6 +58,14 @@ COLOR_CYAN='\033[0;36m'
 COLOR_LIGHTCYAN='\033[1;36m'
 COLOR_DEFAULT='\033[0m'
 
+# Function to trim leading and trailing whitespace from Bash variable
+function trim () {
+    local var=$@
+    var="${var#"${var%%[![:space:]]*}"}"   # remove leading whitespace characters
+    var="${var%"${var##*[![:space:]]}"}"   # remove trailing whitespace characters
+    echo -n "$var"
+}
+
 # Function to set prompt_command to.
 function promptcmd () {
     history -a 
@@ -171,6 +179,12 @@ function promptcmd () {
         PS1="${PS1}\[${COLOR_YELLOW}\][ve:${VENV}] "
     fi
     
+    # Git Branch Status
+    if [ -n "$(__git_ps1)" ]; then
+        local GITBRNCH=$(trim $(__git_ps1))
+        PS1="${PS1}\[${COLOR_GREEN}\]${GITBRNCH} "
+    fi
+
     # Bracket {
     if [ ${UID} -eq 0 ]; then              
         if [ "${USER}" == "${LOGNAME}" ]; then 
